@@ -19,11 +19,11 @@ const displayProducts = (products) => {
         products.forEach((product) => {
             let col = document.createElement("div")
             col.classList.add("col-3", "mb-4")
-            col.innerHTML = `<div class="card">
-                                <img src="${product.imageUrl}" class="card-img-top img-fluid pt-1" alt="...">
+            col.innerHTML = `<div class="card" style="height: 36rem">
+                                <img src="${product.imageUrl}" class="card-img-top img-fluid pt-1" alt="Product" style="height: 18rem">
                                 <div class="card-body">
                                    <h5 class="card-title">${product.name}</h5>
-                                   <p class="card-text">${product.description}</p>
+                                   <p class="card-text description">${product.description}</p>
                                    <p class="card-text">Brand: ${product.brand}</p>
                                    <span class="d-flex justify-content-between">Price: ${product.price}$<a href="#" class="btn btn-primary"><i class="bi bi-cart3"></i> Buy</a></span>
                                 </div>
