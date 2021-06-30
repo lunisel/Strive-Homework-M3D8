@@ -91,12 +91,18 @@ const handleSubmit = async () => {
 
     const url = "https://striveschool-api.herokuapp.com/api/product/"
 
+    let name = document.getElementById("name")
+    let description = document.getElementById("description")
+    let brand = document.getElementById("brand")
+    let imageUrl = document.getElementById("imageUrl")
+    let price = document.getElementById("price")
+
     const myProduct = {
-        name: document.getElementById("name").value,
-        description: document.getElementById("description").value,
-        brand: document.getElementById("brand").value,
-        imageUrl: document.getElementById("imageUrl").value,
-        price: document.getElementById("price").value
+        name: name.value,
+        description: description.value,
+        brand: brand.value,
+        imageUrl: imageUrl.value,
+        price: price.value
     }
 
     try {
@@ -112,6 +118,11 @@ const handleSubmit = async () => {
         if(response.ok) {
             const respProduct = await response.json()
             alert("Product added successfully ! ID:" + respProduct._id)
+            name.value = ""
+            description.value = ""
+            brand.value = ""
+            imageUrl.value = ""
+            price.value = ""
         }
     } catch (err) {
         console.log(err)

@@ -20,7 +20,7 @@ const displayProducts = (products) => {
             let col = document.createElement("div")
             col.classList.add("col-3", "mb-4")
             col.innerHTML = `<div class="card">
-                                <img src="${product.imageUrl}" class="card-img-top img-fluid" alt="...">
+                                <img src="${product.imageUrl}" class="card-img-top img-fluid pt-1" alt="...">
                                 <div class="card-body">
                                    <h5 class="card-title">${product.name}</h5>
                                    <p class="card-text">${product.description}</p>
